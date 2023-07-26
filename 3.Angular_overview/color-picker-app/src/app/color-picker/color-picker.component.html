@@ -1,0 +1,3 @@
+<h2>Color Picker</h2>
+<input [value]="selectedColor" type="color" (change)="onChangeColor($event.target.value)">
+<div class="selected-color" [style.background]="selectedColor"></div>
