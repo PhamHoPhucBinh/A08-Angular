@@ -1,0 +1,18 @@
+nav {
+  background-color: #333;
+  display: flex;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+a:hover {
+  background-color: #555;
+}
+
+.active {
+  background-color: #555;
+}
