@@ -1,0 +1,90 @@
+<form [formGroup]="registerForm" (ngSubmit)="submit()">
+  <!--ID-->
+  <div>
+    <label for="id"> ID </label>
+    <input type="text" id="id" formControlName="id">
+  </div>
+  <div *ngIf="registerFormControl['id'].hasError('required') && registerFormControl['id'].touched">
+    ID is required.
+  </div>
+  <div *ngIf="registerFormControl['id'].hasError('pattern') && registerFormControl['id'].touched">
+    ID is invalid pattern.
+  </div>
+  <!--EMAIL-->
+<!--  <div>-->
+<!--    <label for="email"> email </label>-->
+<!--    <input type="text" id="email" formControlName="email">-->
+<!--  </div>-->
+<!--  <div *ngIf="registerFormControl['email'].hasError('required') && registerFormControl['email'].touched">-->
+<!--    email required-->
+<!--  </div>-->
+<!--  <div *ngIf="registerFormControl['email'].hasError('email') && registerFormControl['email'].touched">-->
+<!--    email invalid-->
+<!--  </div>-->
+  <!--  PASSWORD-->
+  <div>
+    <div>
+      <label for="password"> password </label>
+      <input type="text" id="password" formControlName="password">
+    </div>
+    <div *ngIf="registerFormControl['password'].hasError('required')">
+      Password is not empty
+    </div>
+    <div *ngIf="registerFormControl['password'].hasError('minlength')">
+      Password cannot < 6
+    </div>
+    <!--CONFIRM-->
+    <div>
+      <label for="confirmPassword"> confirm password </label>
+      <input type="text" id="confirmPassword" formControlName="confirmPassword">
+    </div>
+    <div *ngIf="registerFormControl['confirmPassword'].touched && registerFormControl['confirmPassword'].invalid"
+         class="alert alert-danger">
+      <div *ngIf="registerFormControl['confirmPassword'].hasError('required')">Password is required.</div>
+      <div *ngIf="registerFormControl['confirmPassword'].hasError('confirmedValidator')">Password and Confirm Password
+        must be match.
+      </div>
+    </div>
+  </div>
+  <!--COUNTRY-->
+  <div class="form-group row">
+    <label for="country">Country</label>
+    <select formControlName="country" id="country">
+      <option *ngFor="let items of countryList" [ngValue]="items.id">{{items.name}}</option>
+    </select>
+  </div>
+  <!--  AGE-->
+  <div>
+    <label for="age"> age </label>
+    <input type="text" id="age" formControlName="age">
+  </div>
+  <div *ngIf="registerFormControl['age'].hasError('min')">
+    Age invalid
+  </div>
+  <!--  GENDER-->
+  <div>
+    <label> gender </label>
+    <input type="radio" formControlName="gender" value="male"> Male
+    <input type="radio" formControlName="gender" value="female"> Female
+    <input type="radio" formControlName="gender" value="other"> Other
+  </div>
+  <div *ngIf="registerForm.controls['gender'].hasError('required')">
+    Gender is required.
+    <!--    PHONE-->
+  </div>
+  <!--   PHONE-->
+  <div>
+    <label for="phone"> phone </label>
+    <input type="text" id="phone" formControlName="phone">
+  </div>
+  <div *ngIf="registerFormControl['phone'].hasError('required') && registerFormControl['phone'].touched">
+    Phone is required.
+  </div>
+  <div *ngIf="registerFormControl['phone'].hasError('pattern')&& registerFormControl['phone'].touched">
+    Phone is invalid pattern.
+  </div>
+
+  <div>
+    <button type="submit" [disabled]="registerForm.invalid" class="btn btn-primary">Submit</button>
+  </div>
+</form>
