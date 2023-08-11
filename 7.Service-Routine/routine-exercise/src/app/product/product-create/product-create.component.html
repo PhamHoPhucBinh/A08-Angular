@@ -1,0 +1,12 @@
+<form [formGroup]="productForm" (ngSubmit)="submit()">
+
+  <label for="name">ID sản phẩm:</label>
+  <input type="text" id="id" formControlName="id">
+  <label for="name">Tên sản phẩm:</label>
+  <input type="text" id="name" formControlName="name">
+  <label for="price">Giá sản phẩm:</label>
+  <input type="number" id="price" formControlName="price">
+  <label for="description">Mô tả:</label>
+  <textarea id="description" formControlName="description"></textarea>
+  <button type="submit">Tạo sản phẩm mới</button>
+</form>
