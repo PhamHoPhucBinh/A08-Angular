@@ -11,5 +11,8 @@
     <td>{{product.name}}</td>
     <td>{{product.price}}</td>
     <td>{{product.description}}</td>
+    <td><a [routerLink]="['/product/update',product.id]">Update</a></td>
+    <td><a [routerLink]="['/product/delete',product.id]">Delete</a></td>
   </tr>
+
 </table>

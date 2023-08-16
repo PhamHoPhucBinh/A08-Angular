@@ -7,12 +7,16 @@ import { TimeslineAppComponent } from './timesline-app/timesline-app.component';
 import { ProductCreateComponent } from './product/product-create/product-create.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProductUdpateComponent } from './product/product-udpate/product-udpate.component';
+import { ProductDeleteComponent } from './product/product-delete/product-delete.component';
 @NgModule({
   declarations: [
     AppComponent,
     TimeslineAppComponent,
     ProductCreateComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductUdpateComponent,
+    ProductDeleteComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,23 @@
+<h1>Update Product Details</h1>
+<form [formGroup]="productForm" (ngSubmit)="updateProduct(id)">
+  <table>
+    <tr>
+      <td>id:</td>
+      <td><input type="number" formControlName="id"></td>
+    </tr>
+    <tr>
+      <td>name:</td>
+      <td><input type="text" formControlName="name"></td>
+    </tr>
+    <tr>
+      <td>price: </td>
+      <td><input type="number" formControlName="price"></td>
+    </tr><tr>
+      <td>description: </td>
+      <td><input type="text" formControlName="description"></td>
+    </tr>
+    <tr>
+      <td><button>Submit</button></td>
+    </tr>
+  </table>
+</form>
