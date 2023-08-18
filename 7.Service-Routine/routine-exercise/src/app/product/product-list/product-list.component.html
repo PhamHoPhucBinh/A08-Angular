@@ -1,4 +1,4 @@
-<h1>Danh sách sản phẩm</h1>
+<h1><i class="fa-solid fa-list"></i>Danh sách sản phẩm</h1>
 <table>
   <tr>
     <td>STT</td>
@@ -11,8 +11,10 @@
     <td>{{product.name}}</td>
     <td>{{product.price}}</td>
     <td>{{product.description}}</td>
-    <td><a [routerLink]="['/product/update',product.id]">Update</a></td>
-    <td><a [routerLink]="['/product/delete',product.id]">Delete</a></td>
+    <td><a [routerLink]="['/product/update',product.id]"> <i class="fa-regular fa-pen-to-square"
+                                                             style="color: aqua"></i></a></td>
+    <td><a [routerLink]="['/product/delete',product.id]"><i class="fa-solid fa-trash" style="color: red"></i></a></td>
+
   </tr>
 
 </table>
