@@ -12,5 +12,11 @@
       "price": 9999,
       "description": "bbb"
     }
+  ],
+  "categories": [
+    {
+      "categoryId":  "1",
+      "categoryName": "Phone"
+    }
   ]
 }

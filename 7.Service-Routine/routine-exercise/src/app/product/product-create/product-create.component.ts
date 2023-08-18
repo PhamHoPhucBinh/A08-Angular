@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {ProductService} from '../../service/product.service';
 import {Router} from '@angular/router';
+import {CategoryService} from "../../service/category.service";
+import {Category} from "../../model/category";
 
 @Component({
   selector: 'app-product-create',
@@ -10,8 +12,11 @@ import {Router} from '@angular/router';
 })
 export class ProductCreateComponent implements OnInit {
   productForm: FormGroup;
+  categories: Category[] = [];
 
-  constructor(private fb: FormBuilder, private productService: ProductService, private router: Router) {
+  // tslint:disable-next-line:max-line-length
+  constructor(private fb: FormBuilder, private productService: ProductService,
+              private router: Router, private categoryService: CategoryService) {
     this.productForm = this.fb.group({
       id: [, Validators.required],
       name: ['', Validators.required],
@@ -34,9 +39,10 @@ export class ProductCreateComponent implements OnInit {
       console.log(e);
     });
   }
+
   getAllCategory() {
-    this.categoryService.getAll().subscribe(products => {
-      this.products = products;
+    this.categoryService.getAll().subscribe(categoires => {
+      this.categories = categoires;
     });
   }
 

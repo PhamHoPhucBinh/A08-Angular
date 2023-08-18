@@ -10,6 +10,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ProductUdpateComponent } from './product/product-udpate/product-udpate.component';
 import { ProductDeleteComponent } from './product/product-delete/product-delete.component';
 import {HttpClientModule} from '@angular/common/http';
+import { CategoryListComponent } from './category/category-list/category-list.component';
+import { CategoryCreateComponent } from './category/category-create/category-create.component';
+import { CategoryUpdateComponent } from './category/category-update/category-update.component';
+import { CategoryDeleteComponent } from './category/category-delete/category-delete.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +21,11 @@ import {HttpClientModule} from '@angular/common/http';
     ProductCreateComponent,
     ProductListComponent,
     ProductUdpateComponent,
-    ProductDeleteComponent
+    ProductDeleteComponent,
+    CategoryListComponent,
+    CategoryCreateComponent,
+    CategoryUpdateComponent,
+    CategoryDeleteComponent
   ],
   imports: [
     BrowserModule,
