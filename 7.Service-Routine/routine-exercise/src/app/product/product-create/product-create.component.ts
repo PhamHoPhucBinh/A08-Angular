@@ -17,16 +17,18 @@ export class ProductCreateComponent implements OnInit {
   // tslint:disable-next-line:max-line-length
   constructor(private fb: FormBuilder, private productService: ProductService,
               private router: Router, private categoryService: CategoryService) {
-    this.productForm = this.fb.group({
-      id: [, Validators.required],
-      name: ['', Validators.required],
-      price: [''],
-      description: ['']
-    });
   }
 
 
   ngOnInit(): void {
+    this.productForm = this.fb.group({
+      id: [, Validators.required],
+      name: ['', Validators.required],
+      price: [''],
+      description: [''],
+      category: ['']
+    });
+    this.getAllCategory();
   }
 
   submit() {
@@ -41,8 +43,8 @@ export class ProductCreateComponent implements OnInit {
   }
 
   getAllCategory() {
-    this.categoryService.getAll().subscribe(categoires => {
-      this.categories = categoires;
+    this.categoryService.getAll().subscribe(categories => {
+      this.categories = categories;
     });
   }
 

@@ -11,12 +11,23 @@
       "name": "bbbbb",
       "price": 9999,
       "description": "bbb"
+    },
+    {
+      "id": "5",
+      "name": "xxxxx",
+      "price": 1231242,
+      "description": "xxxxx",
+      "category": "1"
     }
   ],
   "categories": [
     {
-      "categoryId":  "1",
-      "categoryName": "Phone"
+      "id": "1",
+      "categoryName": "TEST 1"
+    },
+    {
+      "id": 2,
+      "categoryName": "TEST 2"
     }
   ]
 }

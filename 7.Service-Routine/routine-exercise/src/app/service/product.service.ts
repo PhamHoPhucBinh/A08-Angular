@@ -10,7 +10,6 @@ const API_URL = `${environment.apiUrl}`;
   providedIn: 'root'
 })
 export class ProductService {
-  products: Product[] = [{}];
 
   constructor(private http: HttpClient) {
   }

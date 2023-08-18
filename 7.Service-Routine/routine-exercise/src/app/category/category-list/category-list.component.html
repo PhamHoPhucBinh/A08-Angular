@@ -7,9 +7,9 @@
     <td colspan="2"></td>
   </tr>
   <tr *ngFor="let category of categories; index as i">
-    <td>{{category.categoryId}}</td>
+    <td>{{category.id}}</td>
     <td>{{category.categoryName}}</td>
-    <td><a [routerLink]="['/category/edit',category.categoryId]">Update</a></td>
-    <td><a [routerLink]="['/category/delete',category.categoryId]">Delete</a></td>
+    <td><a [routerLink]="['/category/edit',category.id]">Update</a></td>
+    <td><a [routerLink]="['/category/delete',category.id]">Delete</a></td>
   </tr>
 </table>

@@ -1,6 +1,5 @@
 <h1>Create New Product</h1>
 <form [formGroup]="productForm" (ngSubmit)="submit()">
-
   <label for="name">ID sản phẩm:</label>
   <input type="text" id="id" formControlName="id">
   <label for="name">Tên sản phẩm:</label>
@@ -10,4 +9,9 @@
   <label for="description">Mô tả:</label>
   <textarea id="description" formControlName="description"></textarea>
   <button type="submit">Tạo sản phẩm mới</button>
+  <h3>Danh mục sản phẩm</h3>
+  <select formControlName="category">
+    <option selected [value]="null" disabled>choose one</option>
+    <option *ngFor="let category of categories" [value]="category.id">{{category.categoryName}}</option>
+  </select>
 </form>

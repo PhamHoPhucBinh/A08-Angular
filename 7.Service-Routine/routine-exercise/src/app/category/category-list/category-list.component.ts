@@ -18,6 +18,11 @@ export class CategoryListComponent implements OnInit {
 
   getAll() {
     this.categoryService.getAll().subscribe(categories => {
+      categories.forEach(c => {
+        console.log('Expected Category.id', c.id);
+        console.log('Actual Category', c);
+      });
+
       this.categories = categories;
     });
   }
