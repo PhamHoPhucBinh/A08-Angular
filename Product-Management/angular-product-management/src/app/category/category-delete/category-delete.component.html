@@ -1,1 +1,6 @@
-<p>category-delete works!</p>
+<div>
+  <h2>Delete Category</h2>
+  <p>Are you sure you want to delete {{category.categoryName}} category?</p>
+  <button (click)="deleteCategory(categoryId)">Delete</button>
+  <button (click)="cancel()">Cancel</button>
+</div>

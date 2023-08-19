@@ -1,15 +1,6 @@
 {
   "products": [
     {
-      "id": 1,
-      "productName": "ip 11",
-      "price": 12000000,
-      "details": "dep",
-      "category": {
-        "id": "1"
-      }
-    },
-    {
       "id": 2,
       "productName": "samsung",
       "price": 25000000,
@@ -28,12 +19,21 @@
       }
     },
     {
-      "id": 4,
-      "productName": "samsung note",
+      "productName": "oppo",
       "price": 5000000,
-      "details": "ok",
+      "details": "99%",
       "category": {
         "id": "1"
+      },
+      "id": 4
+    },
+    {
+      "id": 5,
+      "productName": "xbox",
+      "price": 9850000,
+      "details": "none",
+      "category": {
+        "id": "3"
       }
     }
   ],
@@ -43,8 +43,12 @@
       "categoryName": "Phone"
     },
     {
-      "id": 2,
-      "categoryName": "TEST 2"
+      "id": 3,
+      "categoryName": "pc"
+    },
+    {
+      "id": 4,
+      "categoryName": "Laptop"
     }
   ]
 }

@@ -14,10 +14,10 @@ const routes: Routes = [
     path: 'create',
     component: ProductCreateComponent
   }, {
-    path: 'edit',
+    path: 'edit/:id',
     component: ProductEditComponent
   }, {
-    path: 'delete',
+    path: 'delete/:id',
     component: ProductDeleteComponent
   },
 ];
