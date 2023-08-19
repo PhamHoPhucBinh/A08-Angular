@@ -9,10 +9,11 @@ import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [NavBarComponent, FooterComponent, HeaderComponent],
-    exports: [
-        NavBarComponent,
-        FooterComponent
-    ],
+  exports: [
+    NavBarComponent,
+    FooterComponent,
+    HeaderComponent
+  ],
   imports: [
     CommonModule,
     SharedRoutingModule

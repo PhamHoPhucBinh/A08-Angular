@@ -58,6 +58,10 @@
     {
       "id": 4,
       "categoryName": "Laptop"
+    },
+    {
+      "id": 5,
+      "categoryName": "Console"
     }
   ]
 }
