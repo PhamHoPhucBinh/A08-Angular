@@ -1,0 +1,25 @@
+<div class="product-form-container">
+  <h1>Create New Product</h1>
+  <form [formGroup]="productForm" (ngSubmit)="submit()">
+    <div class="form-group">
+      <label for="productName">Product Name:</label>
+      <input type="text" id="productName" formControlName="productName" />
+    </div>
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <input type="number" id="price" formControlName="price" />
+    </div>
+    <div class="form-group">
+      <label for="details">Product Details:</label>
+      <input type="text" id="details" formControlName="details" />
+    </div>
+    <div class="form-group">
+      <label for="category">Category:</label>
+      <select id="category" formControlName="category">
+        <option value="" disabled selected>Select a Category</option>
+        <option *ngFor="let category of categories" [value]="category.id">{{category.categoryName}}</option>
+      </select>
+    </div>
+    <button class="submit-button">Submit</button>
+  </form>
+</div>

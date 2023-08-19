@@ -1,0 +1,27 @@
+<div class="page-container">
+  <main class="content">
+    <h1>Product List</h1>
+
+    <a class="create-link" routerLink="/product/create">
+      <i class="fas fa-plus-circle"></i> <!-- Biểu tượng "plus-circle" -->
+    </a>
+
+    <ul class="product-list">
+      <li *ngFor="let product of products; index as i" class="product-item">
+        <div class="product-details">
+          <p><strong>Id:</strong> {{i + 1}}</p>
+          <p><strong>Product Name:</strong> {{product.productName}}</p>
+          <p><strong>Price:</strong> {{product.price}}</p>
+          <p><strong>Details:</strong> {{product.details}}</p>
+          <p><strong>Category:</strong> {{product.category.id}}</p>
+
+        </div>
+        <div class="product-actions">
+          <a [routerLink]="['/product/update',product.id]"> <i class="fa-regular fa-pen-to-square"
+                                                                   style="color: aqua"></i></a>
+          <a [routerLink]="['/product/delete',product.id]"><i class="fa-solid fa-trash" style="color: red"></i></a>
+        </div>
+      </li>
+    </ul>
+  </main>
+</div>

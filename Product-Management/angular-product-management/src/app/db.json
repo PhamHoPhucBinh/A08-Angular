@@ -1,0 +1,50 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "productName": "ip 11",
+      "price": 12000000,
+      "details": "dep",
+      "category": {
+        "id": "1"
+      }
+    },
+    {
+      "id": 2,
+      "productName": "samsung",
+      "price": 25000000,
+      "details": "ok",
+      "category": {
+        "id": "2"
+      }
+    },
+    {
+      "id": 3,
+      "productName": "ip x",
+      "price": 6000000,
+      "details": "xau vcl",
+      "category": {
+        "id": "1"
+      }
+    },
+    {
+      "id": 4,
+      "productName": "samsung note",
+      "price": 5000000,
+      "details": "ok",
+      "category": {
+        "id": "1"
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "categoryName": "Phone"
+    },
+    {
+      "id": 2,
+      "categoryName": "TEST 2"
+    }
+  ]
+}

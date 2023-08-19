@@ -1,1 +1,51 @@
-<p>home works!</p>
+<div id="bill_print{{order.order_id}}" class="hidden-remove " style="font-family: 'Times New Roman'">
+  <div class="bill_content show show show show show show show">
+    <div class="not-show-kitchen" style="display: flex;align-items: center;justify-content: center;">
+
+      <div class="info-area">
+        <div class="name_shop" style="padding: 0px;">
+          <span style="font-size: 15px;font-weight: bold" >CÔNG TY CP CẦU ĐƯỜNG ĐÀ NẴNG <br> XÍ NGHIỆP QUẢN LÝ TNĐ - DV <br>
+                    ------***------</span>
+        </div>
+        <div ng-show="shop_init.is_show_address_bill == 1" class="address_shop">
+          <span style=" font-size: 12px;" class="font-change">170 Hà Bồng - Phường Hòa Xuân - Quận Cẩm Lệ - TP Đà Nẵng</span>
+        </div>
+        <div ng-show="shop_init.is_show_address_bill == 1" class="address_shop"><span style=" font-size: 12px;"
+                                                                                      class="font-change">
+                    Mã số thuế: 0400513870-002</span></div>
+        <div ng-show="shop_init.is_show_address_bill == 1" class="address_shop"><span style="font-size: 13px;">Điện thoại: 0905727352 </span>
+        </div>
+      </div>
+    </div>
+    <table class="food-detail" style="width: 100%;">
+      <tbody>
+      <tr ng-repeat="food_item in order.orderItemR" ng-class="{strikeout:food_item.order_food_status==5}">
+        <th style="text-align: center;  width: 100%; font-size: 18px; font-weight: bold;" class="font-change">
+          VÉ GIỮ XE MÁY, Ô TÔ <br>
+          <div class="total_order mg-t-15 pd-tb-0-i"
+               style="padding-right: 0px!important; text-align: center; font-size: 18px;">Số tiền: <span
+            class="total-number show show show show show show"
+            style=" font-weight: bold!important; font-size: 18px;">{{Tong_Cong}}đ/ Lượt</span>
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <td style="text-align: center;  width: 200%; font-size: 30px; font-weight: bold;" class="font-change"><span
+          style="font-size: 14px;"><span style="font-size: 17px;">Loại xe:{{Ten_Mon}}</span>&nbsp;</span></td>
+      </tr>
+
+      </tbody>
+    </table>
+    <div style="text-align: center;">(Đã bao gồm thuế GTGT)</div>
+    <div class="address_shop bold">
+      <small class="bold-font"><span style="font-size: 12px;">{{Ma_Phieu}}</span></small></div>
+    <span class="show show show" style="font-size: small; text-align: center;">Thời gian bán: {{Ngay_Ban_Hang}} <br>
+            Người thu tiền: {{Ten_Thu_Ngan}}</span></div>
+  <div class="bill_content show show show show show show show"><span class="show show show"
+                                                                     style="font-size: small; text-align: center;">----------------------</span>
+  </div>
+  <div class="bill_content show show show show show show show"><span class="show show show"
+                                                                     style="font-size: small; text-align: center;">
+        </span>
+  </div>
+</div>
