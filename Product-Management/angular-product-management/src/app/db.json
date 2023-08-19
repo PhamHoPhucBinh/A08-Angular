@@ -35,6 +35,15 @@
       "category": {
         "id": "3"
       }
+    },
+    {
+      "id": 6,
+      "productName": "maxxxx",
+      "price": 99999,
+      "details": "ok",
+      "category": {
+        "id": "3"
+      }
     }
   ],
   "categories": [
@@ -43,8 +52,8 @@
       "categoryName": "Phone"
     },
     {
-      "id": 3,
-      "categoryName": "pc"
+      "categoryName": "PC - ",
+      "id": 3
     },
     {
       "id": 4,
