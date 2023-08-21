@@ -18,8 +18,9 @@ export class CategoryListComponent implements OnInit {
     this.getAll();
   }
 
-  onClickHandler(){
-    this.router.navigateByUrl("/categoryProductComponentPath");
+  onClickHandler(id: number){
+    console.log("Category ID: ", id);
+    this.router.navigate(['/categoryProduct',id]); //navigate to component by route path
   }
 
   private getAll() {

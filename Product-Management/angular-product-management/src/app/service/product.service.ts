@@ -18,9 +18,9 @@ export class ProductService {
     return this.http.get<Product[]>(API_URL + '/products');
   }
 
-  // getAllProductsByCategory(categoryId: number) : Observable<Product[]> {
-  //  '/products?category.id=1'
-  // }
+  getAllProductsByCategory(categoryId: number) : Observable<Product[]> {
+   return this.http.get<Product[]>(API_URL +   `/products?category.id=${categoryId}`)
+  }
 
   saveProduct(product): Observable<Product> {
     return this.http.post<Product>(API_URL + '/products', product);

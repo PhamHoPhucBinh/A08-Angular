@@ -34,4 +34,5 @@ export class CategoryService {
   deleteCategory(id: number): Observable<Category> {
     return this.http.delete<Category>(`${API_URL}/categories/${id}`);
   }
+
 }

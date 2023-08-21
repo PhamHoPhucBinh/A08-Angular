@@ -1,10 +1,30 @@
 <div class="page-container">
   <main class="content">
     <h1>Product List</h1>
-
     <a class="create-link" routerLink="/product/create">
       <i class="fas fa-plus-circle"></i> <!-- Biểu tượng "plus-circle" -->
     </a>
+    <select [(ngModel)]="selectedCategory" (change)="filterProductsByCategory()">
+      <option value="all">All Categories</option>
+      <option *ngFor="let category of categories" [value]="category.categoryName">{{ category.categoryName }}</option>
+    </select>
+    <li style="color: #ffc107" *ngFor="let product of filteredProducts; index as i" class="product-item">
+      <div class="product-details">
+        <p><strong>Id:</strong> {{i + 1}}</p>
+        <p><strong>Product Name:</strong> {{product.productName}}</p>
+        <p><strong>Price:</strong> {{product.price}}</p>
+        <p><strong>Details:</strong> {{product.details}}</p>
+        <p><strong>Category:</strong> {{product.category.categoryName}}</p>
+      </div>
+      <div class="product-actions">
+        <a [routerLink]="['/product/edit',product.id]"> <i class="fa-regular fa-pen-to-square"
+                                                           style="color: black"></i></a>
+        <a [routerLink]="['/product/delete',product.id]"><i class="fa-solid fa-trash" style="color: red"></i></a>
+      </div>
+    </li>
+
+
+
 
     <ul class="product-list">
       <li *ngFor="let product of getPaginatedProducts(); index as i" class="product-item">

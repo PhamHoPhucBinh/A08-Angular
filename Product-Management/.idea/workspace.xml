@@ -5,17 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb68c346-8467-417a-a2c5-99dc4488fa22" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-product-management/src/app/category/category-list/category-list.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/src/app/category/category-list/category-list.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/angular-product-management/src/app/category/category-list/category-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/src/app/category/category-list/category-list.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/angular-product-management/src/app/category/category-list/category-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/src/app/category/category-list/category-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-product-management/src/app/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/src/app/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-product-management/src/app/product/product-create/product-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/src/app/product/product-create/product-create.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-product-management/src/app/product/product-create/product-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/src/app/product/product-create/product-create.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-product-management/src/app/product/product-list/product-list.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/src/app/product/product-list/product-list.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-product-management/src/app/category/category-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/src/app/category/category-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/angular-product-management/src/app/product/product-list/product-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/src/app/product/product-list/product-list.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/angular-product-management/src/app/product/product-list/product-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/src/app/product/product-list/product-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-product-management/src/app/product/product-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/src/app/product/product-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-product-management/src/app/product/product.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/src/app/product/product.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-product-management/src/app/service/category.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/src/app/service/category.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/angular-product-management/src/app/service/product.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/src/app/service/product.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,6 +63,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Codegym\A08-Angular\Product-Management\angular-product-management\src\app\product" />
       <recent name="E:\Codegym\A08-Angular\Product-Management\angular-product-management\src\app\service" />
     </key>
   </component>
@@ -77,11 +76,22 @@
       <option name="presentableId" value="Default" />
       <updated>1692434333276</updated>
       <workItem from="1692434336528" duration="14215000" />
-      <workItem from="1692613802095" duration="6529000" />
+      <workItem from="1692613802095" duration="15374000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/angular-product-management/src/app/product/product-routing.module.ts</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

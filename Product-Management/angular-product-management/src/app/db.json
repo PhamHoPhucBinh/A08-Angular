@@ -19,6 +19,26 @@
         "categoryName": "PC - ",
         "id": 3
       }
+    },
+    {
+      "id": 3,
+      "productName": "abxbxs",
+      "price": 5821654,
+      "details": "none",
+      "category": {
+        "id": 4,
+        "categoryName": "Laptop"
+      }
+    },
+    {
+      "id": 4,
+      "productName": "samsung note",
+      "price": 95000000,
+      "details": "99%",
+      "category": {
+        "id": "1",
+        "categoryName": "Phone"
+      }
     }
   ],
   "categories": [
