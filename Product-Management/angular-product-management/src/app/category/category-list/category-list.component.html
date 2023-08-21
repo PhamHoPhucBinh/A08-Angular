@@ -9,7 +9,7 @@
     <th>Category Name</th>
     <th colspan="2">Actions</th>
   </tr>
-  <tr *ngFor="let category of categories; index as i" class="category-item">
+  <tr *ngFor="let category of categories; index as i" class="category-item" click="onClickHandler()">
     <td>{{ i + 1 }}</td>
     <td>{{ category.categoryName }}</td>
     <td><a class="btn btn-primary" href="/category/edit/{{ category.id }}">Edit</a></td>

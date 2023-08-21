@@ -30,9 +30,7 @@ export class ProductCreateComponent implements OnInit {
   }
   submit() {
     const product = this.productForm.value;
-    product.category = {
-      id: product.category
-    };
+    product.category = this.productForm.get("category").value;
     this.productService.saveProduct(product).subscribe(() => {
       alert('Create Successfully!');
       this.router.navigate(['/product/list']);
@@ -41,8 +39,8 @@ export class ProductCreateComponent implements OnInit {
   }
 
   private getAllCategory() {
-    this.categoryService.getAll().subscribe(categoires => {
-      this.categories = categoires;
+    this.categoryService.getAll().subscribe(categories => {
+      this.categories = categories;
     });
   }
 }

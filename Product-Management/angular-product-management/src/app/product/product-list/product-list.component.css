@@ -109,3 +109,10 @@ h1 {
   background-color: #f5f5f5; /* Màu nền khi hover vào */
   border: 1px solid #ddd;   /* Viền khi hover vào */
 }
+h1 {
+  text-align: center;
+  padding: 20px;
+  color: red;
+  font-size: xxx-large;
+
+}

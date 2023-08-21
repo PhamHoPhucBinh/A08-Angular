@@ -1,48 +1,23 @@
 {
   "products": [
     {
+      "id": 1,
+      "productName": "iphone 15 pro",
+      "price": 36000000,
+      "details": "brand new",
+      "category": {
+        "id": "1",
+        "categoryName": "Phone"
+      }
+    },
+    {
       "id": 2,
-      "productName": "samsung",
-      "price": 25000000,
-      "details": "ok",
+      "productName": "aaaa",
+      "price": 232132,
+      "details": "xxxx",
       "category": {
-        "id": "2"
-      }
-    },
-    {
-      "id": 3,
-      "productName": "ip x",
-      "price": 6000000,
-      "details": "xau vcl",
-      "category": {
-        "id": "1"
-      }
-    },
-    {
-      "productName": "oppo",
-      "price": 5000000,
-      "details": "99%",
-      "category": {
-        "id": "1"
-      },
-      "id": 4
-    },
-    {
-      "id": 5,
-      "productName": "xbox",
-      "price": 9850000,
-      "details": "none",
-      "category": {
-        "id": "3"
-      }
-    },
-    {
-      "id": 6,
-      "productName": "maxxxx",
-      "price": 99999,
-      "details": "ok",
-      "category": {
-        "id": "3"
+        "categoryName": "PC - ",
+        "id": 3
       }
     }
   ],

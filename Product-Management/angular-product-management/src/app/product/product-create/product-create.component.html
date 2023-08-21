@@ -17,7 +17,7 @@
       <label for="category">Category:</label>
       <select id="category" formControlName="category">
         <option value="" disabled selected>Select a Category</option>
-        <option *ngFor="let category of categories" [value]="category.id">{{category.categoryName}}</option>
+        <option *ngFor="let category of categories" [ngValue]="category">{{category.categoryName}}</option>
       </select>
     </div>
     <button class="submit-button">Submit</button>

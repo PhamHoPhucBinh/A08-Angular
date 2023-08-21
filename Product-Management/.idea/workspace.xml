@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb68c346-8467-417a-a2c5-99dc4488fa22" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-product-management/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-product-management/src/app/shared/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/src/app/shared/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-product-management/src/app/shared/shared.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/src/app/shared/shared.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-product-management/src/app/category/category-list/category-list.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/src/app/category/category-list/category-list.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-product-management/src/app/category/category-list/category-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/src/app/category/category-list/category-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-product-management/src/app/category/category-list/category-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/src/app/category/category-list/category-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-product-management/src/app/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/src/app/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-product-management/src/app/product/product-create/product-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/src/app/product/product-create/product-create.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-product-management/src/app/product/product-create/product-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/src/app/product/product-create/product-create.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-product-management/src/app/product/product-list/product-list.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/src/app/product/product-list/product-list.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-product-management/src/app/product/product-list/product-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/src/app/product/product-list/product-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-product-management/src/app/product/product-list/product-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/src/app/product/product-list/product-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-product-management/src/app/service/product.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/src/app/service/product.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,32 +37,32 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2UCCmJFq0koaHBBhabinGkfKd3i" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "E:/Codegym/A08-Angular/7.Service-Routine",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "E:\\Codegym\\A08-Angular\\Product-Management\\angular-product-management\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Codegym/A08-Angular/7.Service-Routine&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;E:\\Codegym\\A08-Angular\\Product-Management\\angular-product-management\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Codegym\A08-Angular\Product-Management\angular-product-management\src\app\service" />
@@ -68,7 +76,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1692434333276</updated>
-      <workItem from="1692434336528" duration="13600000" />
+      <workItem from="1692434336528" duration="14215000" />
+      <workItem from="1692613802095" duration="6529000" />
     </task>
     <servers />
   </component>
