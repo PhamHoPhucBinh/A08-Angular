@@ -1,8 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+// @ts-ignore
+import {Component, OnInit} from '@angular/core';
 import {Product} from "../../model/product";
 import {ProductService} from "../../service/product.service";
-import {ActivatedRoute, ParamMap, Router} from "@angular/router";
+// @ts-ignore
+import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 
+// @ts-ignore
 @Component({
   selector: 'app-product-search',
   templateUrl: './product-search.component.html',

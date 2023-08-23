@@ -1,0 +1,28 @@
+.nav-bar {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+  color: #ffc107; /* Change to your desired hover color */
+}
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    text-align: center;
+  }
+}

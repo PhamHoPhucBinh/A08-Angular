@@ -1,0 +1,42 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "studentName": "name test 1",
+      "studentGender": {
+        "id": "1",
+        "genderName": "Male"
+      },
+      "phone": "0923695395",
+      "email": "a@gmail.com",
+      "address": "123 hung vuong, DN"
+    }
+  ],
+  "teachers": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "genders": [
+    {
+      "id": 1,
+      "genderName": "Male"
+    },
+    {
+      "id": 2,
+      "genderName": "Female"
+    }
+  ],
+  "educations": [
+    {
+      "id": 1,
+      "educationName": "Master"
+    },
+    {
+      "id": 2,
+      "educationName": "College"
+    }
+  ]
+}
