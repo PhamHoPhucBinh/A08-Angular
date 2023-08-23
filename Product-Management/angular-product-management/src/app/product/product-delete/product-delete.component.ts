@@ -39,4 +39,6 @@ export class ProductDeleteComponent implements OnInit {
       console.log(e);
     });
   }
+
+
 }

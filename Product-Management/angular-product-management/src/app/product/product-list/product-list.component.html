@@ -8,7 +8,8 @@
       <option value="all">All Categories</option>
       <option *ngFor="let category of categories" [value]="category.categoryName">{{ category.categoryName }}</option>
     </select>
-    <li style="color: #ffc107" *ngFor="let product of filteredProducts; index as i" class="product-item">
+    <ul class="product-list">
+    <li style="color: darkred" *ngFor="let product of filteredProducts; index as i" class="product-item">
       <div class="product-details">
         <p><strong>Id:</strong> {{i + 1}}</p>
         <p><strong>Product Name:</strong> {{product.productName}}</p>
@@ -22,9 +23,11 @@
         <a [routerLink]="['/product/delete',product.id]"><i class="fa-solid fa-trash" style="color: red"></i></a>
       </div>
     </li>
+    </ul>
+        <button (click)="goToPreviousPage()" [disabled]="!canGoToPreviousPage()">Previous</button>
+        <button (click)="goToNextPage()" [disabled]="!canGoToNextPage()">Next</button>
 
-
-
+<!--    list 2-->
 
     <ul class="product-list">
       <li *ngFor="let product of getPaginatedProducts(); index as i" class="product-item">
@@ -38,12 +41,42 @@
         <div class="product-actions">
           <a [routerLink]="['/product/edit',product.id]"> <i class="fa-regular fa-pen-to-square"
                                                                    style="color: black"></i></a>
-          <a [routerLink]="['/product/delete',product.id]"><i class="fa-solid fa-trash" style="color: red"></i></a>
+<!--          <a [routerLink]="['/product/delete',product.id]"><i class="fa-solid fa-trash" style="color: red"></i></a>-->
+          <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                  [attr.data-bs-target]="['#'+product.id]">
+            DELETE
+          </button>
+
+          <div class="modal fade" [id]="product.id" tabindex="-1"
+               aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Confirm delete employee</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>Do you want to delete {{product.productName}} product?</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-warning" data-bs-dismiss="modal" (click)="delete(product.id,product.productName)">
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
         </div>
       </li>
     </ul>
-    <button (click)="goToPreviousPage()" [disabled]="!canGoToPreviousPage()">Previous</button>
-    <button (click)="goToNextPage()" [disabled]="!canGoToNextPage()">Next</button>
-
+    <button (click)="goToPreviousPage()" [disabled]="!canGoToPreviousPage()"><i class="fas fa-chevron-left"></i></button>
+    <button (click)="goToNextPage()" [disabled]="!canGoToNextPage()"><i class="fas fa-chevron-right"></i></button>
   </main>
 </div>
+
+
+
+

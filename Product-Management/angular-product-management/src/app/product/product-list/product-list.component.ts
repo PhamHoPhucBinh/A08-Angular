@@ -3,6 +3,7 @@ import {Product} from "../../model/product";
 import {ProductService} from "../../service/product.service";
 import {Category} from "../../model/category";
 import {CategoryService} from "../../service/category.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-product-list',
@@ -17,7 +18,8 @@ export class ProductListComponent implements OnInit {
   itemsPerPage: number = 3;
   selectedCategory: string = 'all'; // Danh mục được chọn từ dropdown
   filteredProducts: Product[] = [];
-  constructor(private productService: ProductService, private categoryService: CategoryService) { }
+
+  constructor(private productService: ProductService, private categoryService: CategoryService, private router: Router) { }
 
   ngOnInit(): void {
     this.getAll();
@@ -65,6 +67,14 @@ export class ProductListComponent implements OnInit {
   private getAllCategory() {
     this.categoryService.getAll().subscribe(categories => {
       this.categories = categories;
+    });
+  }
+  delete(id: number, productName: string) {
+    this.productService.deleteProduct(id).subscribe(() => {
+      alert('delete succesfully!');
+      this.router.navigate(['/product/list']);
+    }, e => {
+      console.log(e);
     });
   }
 }
