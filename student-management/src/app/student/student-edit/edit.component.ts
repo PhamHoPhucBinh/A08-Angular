@@ -15,7 +15,7 @@ export class EditComponent implements OnInit {
   genders: Gender[];
   id: number;
   studentForm: FormGroup;
-
+  isFormValid = false;
 
   constructor(private studentService: StudentService,
               private router: Router,
@@ -23,7 +23,7 @@ export class EditComponent implements OnInit {
               private genderService: GenderService) {
     this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
       this.id = +paramMap.get('id');
-      this.getProduct(this.id);
+      this.getStudent(this.id);
     });
   }
 
@@ -31,14 +31,17 @@ export class EditComponent implements OnInit {
     this.getAllGender();
   }
 
-  private getProduct(id: number) {
+  private getStudent(id: number) {
     return this.studentService.findById(id).subscribe(student => {
       this.studentForm = new FormGroup({
-        studentName: new FormControl(student.studentName),
-        phone: new FormControl(student.phone),
-        address: new FormControl(student.address),
-        email: new FormControl(student.email),
-        gender: new FormControl(student.gender)
+        studentName: new FormControl(student.studentName, [Validators.required, Validators.pattern('^([A-Z][a-z]+)( [A-Z][a-z]+)+$')]),
+        phone: new FormControl(student.phone, [Validators.required]),
+        address: new FormControl(student.address, [Validators.required]),
+        email: new FormControl(student.email, Validators.email),
+        gender: new FormControl(student.gender, [Validators.required])
+      });
+      this.studentForm.statusChanges.subscribe(status => {
+        this.isFormValid = status === 'VALID';
       });
     });
   }

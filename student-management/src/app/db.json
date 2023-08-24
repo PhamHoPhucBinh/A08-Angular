@@ -14,31 +14,32 @@
   ],
   "teachers": [
     {
-      "id": 1,
       "teacherName": "Phuc Binh",
       "gender": {
         "id": 1,
         "genderName": "Male"
       },
+      "education": {
+        "id": 2,
+        "educationName": "College"
+      },
       "birthday": "23/10/1996",
-      "education": 0,
-      "salary": 65000000
+      "salary": 950,
+      "id": 3
     },
     {
-      "id": 2,
-      "teacherName": "Phuc Binh",
-      "gender": 0,
-      "birthday": "23/10/1996",
-      "education": 0,
-      "salary": 989000
-    },
-    {
-      "id": 3,
-      "teacherName": "Phuc Binh",
-      "gender": 0,
-      "birthday": "23/10/1996",
-      "education": 0,
-      "salary": 950
+      "id": 4,
+      "teacherName": "Hoang Anh",
+      "gender": {
+        "id": 2,
+        "genderName": "Female"
+      },
+      "birthday": "21/01/1995",
+      "education": {
+        "id": 2,
+        "educationName": "College"
+      },
+      "salary": 9000000
     }
   ],
   "genders": [

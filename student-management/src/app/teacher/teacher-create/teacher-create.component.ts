@@ -28,10 +28,10 @@ export class TeacherCreateComponent implements OnInit {
     this.teacherForm = new FormGroup({
       id: new FormControl(),
       teacherName: new FormControl('', [Validators.required, Validators.pattern('^([A-Z][a-z]+)( [A-Z][a-z]+)+$')]),
-      gender: new FormControl(0, [Validators.required]),
+      gender: new FormControl('', [Validators.required]),
       // tslint:disable-next-line:max-line-length
       birthday: new FormControl('', [Validators.required, Validators.pattern('(?:\\d{1,2}[-/\\s]\\d{1,2}[-/\\s]\'?\\d{2,4})|(?:\\d{2,4}[-/\\s]\\d{1,2}[-/\\s]\\d{1,2})|(?:(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)[\\s-/,]*?\\d{1,2}(?:\\s)*(?:rd|th|st)?(?:\\s)*[-/,]?(?:\\s)*\'?\\d{2,4})|(?:\\d{1,2}(?:\\s)*(?:rd|th|st)?(?:\\s)*(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)(?:\\s)*?[-/,]?(?:\\s)*\'?\\d{2,4})')]),
-      education: new FormControl(0, [Validators.required]),
+      education: new FormControl('', [Validators.required]),
       salary: new FormControl('', [Validators.required]),
     });
     this.teacherForm.statusChanges.subscribe(status => {

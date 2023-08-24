@@ -2,6 +2,7 @@
   <div class="product-form-container">
     <h1>Create New Product</h1>
     <form [formGroup]="teacherForm" (ngSubmit)="submit()">
+<!--      NAME-->
       <div class="form-group">
         <label for="teacherName">Teacher Name:</label>
         <input type="text" id="teacherName" class="form-control" formControlName="teacherName"/>
@@ -11,6 +12,7 @@
           <div *ngIf="teacherForm.get('teacherName').hasError('pattern')">Invalid name format</div>
         </div>
       </div>
+<!--      BIRTHDAY-->
       <div class="form-group">
         <label for="birthday">Birthday:</label>
         <input type="text" id="birthday" class="form-control" formControlName="birthday"/>
@@ -20,6 +22,7 @@
           <div *ngIf="teacherForm.get('birthday').hasError('pattern')">Invalid phone format</div>
         </div>
       </div>
+<!--      SALARY-->
       <div class="form-group">
         <label for="salary">Salary:</label>
         <input type="number" id="salary" class="form-control" formControlName="salary"/>
@@ -29,6 +32,7 @@
           <div *ngIf="teacherForm.get('salary').hasError('pattern')">Invalid Salary format</div>
         </div>
       </div>
+<!--      GENDER-->
       <div class="form-group">
         <label for="gender">Gender:</label>
         <select id="gender" class="form-control" formControlName="gender" required>
@@ -40,6 +44,7 @@
           <div *ngIf="teacherForm.get('gender').hasError('required')">Gender is required</div>
         </div>
       </div>
+<!--      EDUCATION-->
       <div class="form-group">
         <label for="education">Education:</label>
         <select id="education" class="form-control" formControlName="education" required>

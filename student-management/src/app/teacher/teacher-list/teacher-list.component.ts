@@ -36,7 +36,7 @@ export class TeacherListComponent implements OnInit {
   ngOnInit(): void {
     this.getAllEducation();
     this.getAllTeacher();
-    this.getAllEducation();
+    this.getAllGender();
   }
 
   getAllTeacher() {

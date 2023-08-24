@@ -1,1 +1,55 @@
-<p>teacher-edit works!</p>
+<div class="container mt-5">
+  <h1 class="mb-4">Update</h1>
+  <form *ngIf="teacherForm" [formGroup]="teacherForm" (ngSubmit)="editTeacher(id)">
+    <div class="mb-3">
+      <label for="teacherName" class="form-label">Teacher Name:</label>
+      <input type="text" class="form-control" id="teacherName" formControlName="teacherName">
+      <div
+        *ngIf="teacherForm.get('teacherName').invalid && (teacherForm.get('teacherName').dirty || teacherForm.get('teacherName').touched)">
+        <div *ngIf="teacherForm.get('teacherName').hasError('required')">Teacher Name is required</div>
+        <div *ngIf="teacherForm.get('teacherName').hasError('pattern')">Invalid name format</div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="gender" class="form-label">Gender:</label>
+      <select class="form-select" id="gender" formControlName="gender">
+        <option disabled selected>choose gender</option>
+        <option *ngFor="let gender of genders" [ngValue]="gender">{{gender.genderName}}</option>
+      </select>
+      <div
+        *ngIf="teacherForm.get('gender').invalid && (teacherForm.get('gender').dirty || teacherForm.get('gender').touched)">
+        <div *ngIf="teacherForm.get('gender').hasError('required')">Gender is required</div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="education" class="form-label">Education:</label>
+      <select class="form-select" id="education" formControlName="education">
+        <option disabled selected>choose education</option>
+        <option *ngFor="let education of educations" [ngValue]="education">{{education.educationName}}</option>
+      </select>
+      <div
+        *ngIf="teacherForm.get('education').invalid && (teacherForm.get('education').dirty || teacherForm.get('education').touched)">
+        <div *ngIf="teacherForm.get('education').hasError('required')">education is required</div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="birthday" class="form-label">Birthday:</label>
+      <input type="text" class="form-control" id="birthday" formControlName="birthday">
+      <div
+        *ngIf="teacherForm.get('birthday').invalid && (teacherForm.get('birthday').dirty || teacherForm.get('birthday').touched)">
+        <div *ngIf="teacherForm.get('birthday').hasError('required')">Teacher birthday is required</div>
+        <div *ngIf="teacherForm.get('birthday').hasError('pattern')">Invalid birthday format</div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="salary" class="form-label">Salary:</label>
+      <input type="number" class="form-control" id="salary" formControlName="salary">
+      <div
+        *ngIf="teacherForm.get('salary').invalid && (teacherForm.get('salary').dirty || teacherForm.get('salary').touched)">
+        <div *ngIf="teacherForm.get('salary').hasError('required')">salary is required</div>
+
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!isFormValid"><i class="fas fa-save me-2"></i></button>
+  </form>
+</div>
