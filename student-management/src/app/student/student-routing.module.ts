@@ -15,7 +15,7 @@ const routes: Routes = [{
 }, {
   path: 'edit/:id',
   component: EditComponent
-},{
+}, {
   path: 'delete/:id',
   component: DeleteConfirmationDialogComponent
 }

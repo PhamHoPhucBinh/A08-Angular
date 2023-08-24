@@ -45,12 +45,6 @@ export class StudentListComponent implements OnInit {
     });
   }
 
-  delete(id: number, studentName: string) {
-    this.studentService.deleteStudent(id).subscribe(() => {
-      document.getElementById('row' + id).remove();
-    });
-  }
-
   onSubmit() {
     const formValue = this.searchStudentForm.value;
     this.studentService.searchStudent(formValue.name, formValue.gender).subscribe((data) => {
@@ -69,7 +63,9 @@ export class StudentListComponent implements OnInit {
           () => {
             // Successfully deleted
             alert('delete successfully');
-            this.router.navigate(['/student/list']);
+            this.studentService.getAllStudent().subscribe(data => {
+              this.students = data;
+            });
           },
           error => {
             console.error('Error deleting student:', error);

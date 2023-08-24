@@ -1,33 +1,44 @@
 {
   "students": [
     {
-      "id": 6,
-      "studentName": "Phúc An",
-      "gender": {
-        "id": 2,
-        "genderName": "Female"
-      },
-      "email": "a@gmail.com",
-      "phone": 9123456798,
-      "address": "USA"
-    },
-    {
-      "studentName": "Phuc Minh",
-      "phone": 91654621,
-      "address": "BVBVB",
-      "email": "a@gmail.com",
+      "id": 1,
+      "studentName": "Phu Binh",
       "gender": {
         "id": 1,
         "genderName": "Male"
       },
-      "id": 7
+      "email": "hophucbinh2396@gmail.com",
+      "phone": 923695395,
+      "address": "201714679"
     }
   ],
   "teachers": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "teacherName": "Phuc Binh",
+      "gender": {
+        "id": 1,
+        "genderName": "Male"
+      },
+      "birthday": "23/10/1996",
+      "education": 0,
+      "salary": 65000000
+    },
+    {
+      "id": 2,
+      "teacherName": "Phuc Binh",
+      "gender": 0,
+      "birthday": "23/10/1996",
+      "education": 0,
+      "salary": 989000
+    },
+    {
+      "id": 3,
+      "teacherName": "Phuc Binh",
+      "gender": 0,
+      "birthday": "23/10/1996",
+      "education": 0,
+      "salary": 950
     }
   ],
   "genders": [

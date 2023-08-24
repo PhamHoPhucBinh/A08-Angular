@@ -1,1 +1,46 @@
-<p>teacher-list works!</p>
+<form [formGroup]="searchTeacherForm" (submit)="onSubmit()" class="m-3 p-4 border rounded">
+  <div class="mb-3">
+    <label for="name" class="form-label">Teacher Name</label>
+    <input formControlName="name" type="text" class="form-control" id="name">
+  </div>
+  <div class="mb-3">
+    <label for="gender" class="form-label">Gender</label>
+    <select formControlName="gender" class="form-select" id="gender">
+      <option value="0">All</option>
+      <option *ngFor="let gender of genders" [value]="gender.id">{{gender.genderName}}</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+<div class="page-container">
+  <main class="content">
+    <h1>Teacher List</h1>
+    <a class="create-link" routerLink="/teacher/create">
+      <i style="font-size: xx-large " class="fas fa-plus-circle"></i> <!-- Biểu tượng "plus-circle" -->
+    </a>
+    <ul class="product-list">
+      <li style="color: black"
+          *ngFor="let teacher of teachers | paginate: {itemsPerPage: 2,currentPage: p }; index as i"
+          class="product-item">
+        <div class="product-details">
+          <p><strong>Id:</strong> {{i + 1}}</p>
+          <p><strong>Teacher Name:</strong> {{teacher.teacherName}}</p>
+          <p><strong>Gender:</strong> {{teacher.gender.genderName}}</p>
+          <p><strong>Education:</strong> {{teacher.education.educationName}}</p>
+          <p><strong>Birthday:</strong> {{teacher.birthday}}</p>
+          <p><strong>Salary:</strong> {{teacher.salary}}</p>
+        </div>
+        <div class="product-actions">
+          <a [routerLink]="['/teacher/edit',teacher.id]"> <i class="fa-regular fa-pen-to-square"
+                                                             style="color: black"></i></a>
+          <a (click)="openDeleteConfirmationDialog(teacher.id)">
+            <i class="fa-solid fa-trash" style="color: red"></i>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </main>
+</div>
+<pagination-controls (pageChange)="p = $event" previousLabel="Previous"
+                     nextLabel="Next" style="text-align: center"></pagination-controls>

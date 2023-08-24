@@ -1,10 +1,11 @@
-import {Education} from "./education";
+import {Education} from './education';
+import {Gender} from './gender';
 
 export interface Teacher {
-  id: number,
+  id: number;
   teacherName: string;
+  gender: Gender;
   education: Education;
-  phone: string;
-  email: string;
+  birthday: string;
   salary: number;
 }

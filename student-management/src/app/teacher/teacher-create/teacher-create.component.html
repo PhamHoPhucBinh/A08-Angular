@@ -1,1 +1,57 @@
-<p>teacher-create works!</p>
+<div class="container mt-5">
+  <div class="product-form-container">
+    <h1>Create New Product</h1>
+    <form [formGroup]="teacherForm" (ngSubmit)="submit()">
+      <div class="form-group">
+        <label for="teacherName">Teacher Name:</label>
+        <input type="text" id="teacherName" class="form-control" formControlName="teacherName"/>
+        <div
+          *ngIf="teacherForm.get('teacherName').invalid && (teacherForm.get('teacherName').dirty || teacherForm.get('teacherName').touched)">
+          <div *ngIf="teacherForm.get('teacherName').hasError('required')">Teacher Name is required</div>
+          <div *ngIf="teacherForm.get('teacherName').hasError('pattern')">Invalid name format</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="birthday">Birthday:</label>
+        <input type="text" id="birthday" class="form-control" formControlName="birthday"/>
+        <div
+          *ngIf="teacherForm.get('birthday').invalid && (teacherForm.get('birthday').dirty || teacherForm.get('birthday').touched)">
+          <div *ngIf="teacherForm.get('birthday').hasError('required')">Birthday is required</div>
+          <div *ngIf="teacherForm.get('birthday').hasError('pattern')">Invalid phone format</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="salary">Salary:</label>
+        <input type="number" id="salary" class="form-control" formControlName="salary"/>
+        <div
+          *ngIf="teacherForm.get('salary').invalid && (teacherForm.get('salary').dirty || teacherForm.get('salary').touched)">
+          <div *ngIf="teacherForm.get('salary').hasError('required')">Salary is required</div>
+          <div *ngIf="teacherForm.get('salary').hasError('pattern')">Invalid Salary format</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" class="form-control" formControlName="gender" required>
+          <option value=0 disabled selected>Select a gender</option>
+          <option *ngFor="let gender of genders" [ngValue]="gender">{{gender.genderName}}</option>
+        </select>
+        <div
+          *ngIf="teacherForm.get('gender').invalid && (teacherForm.get('gender').dirty || teacherForm.get('gender').touched)">
+          <div *ngIf="teacherForm.get('gender').hasError('required')">Gender is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="education">Education:</label>
+        <select id="education" class="form-control" formControlName="education" required>
+          <option value=0 disabled selected>Select a education</option>
+          <option *ngFor="let education of educations" [ngValue]="education">{{education.educationName}}</option>
+        </select>
+        <div
+          *ngIf="teacherForm.get('education').invalid && (teacherForm.get('education').dirty || teacherForm.get('education').touched)">
+          <div *ngIf="teacherForm.get('education').hasError('required')">education is required</div>
+        </div>
+      </div>
+      <button class="btn btn-primary" [disabled]="!isFormValid">Submit</button>
+    </form>
+  </div>
+</div>
