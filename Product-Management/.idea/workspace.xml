@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb68c346-8467-417a-a2c5-99dc4488fa22" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../student-management/src/app/model/education.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../student-management/src/app/model/gender.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../student-management/src/app/model/student.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../student-management/src/app/model/teacher.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-product-management/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-product-management/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-product-management/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-product-management/src/app/product/product-search/product-search.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-product-management/src/app/product/product-search/product-search.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student-management/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../student-management/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student-management/src/app/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/../student-management/src/app/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student-management/src/app/service/student.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../student-management/src/app/service/student.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student-management/src/app/student/student-list/student-list.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../student-management/src/app/student/student-list/student-list.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student-management/src/app/student/student-list/student-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../student-management/src/app/student/student-list/student-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student-management/src/app/student/student-list/student-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../student-management/src/app/student/student-list/student-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student-management/src/app/student/student.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../student-management/src/app/student/student.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,29 +33,34 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 4
+}]]></component>
   <component name="ProjectId" id="2UCCmJFq0koaHBBhabinGkfKd3i" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="D:\CodegymA06\A08-Angular\Product-Management\angular-product-management\node_modules\typescript\lib" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "E:/Codegym/A08-Angular/student-management",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Codegym\A08-Angular\Product-Management\angular-product-management\src\app\product" />
       <recent name="E:\Codegym\A08-Angular\Product-Management\angular-product-management\src\app\service" />
     </key>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -72,17 +76,12 @@
       <workItem from="1692703652302" duration="4104000" />
       <workItem from="1692789331920" duration="1340000" />
       <workItem from="1692794167440" duration="18000" />
+      <workItem from="1692804037000" duration="1673000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1692790686207">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1692790686207" />
+    <option name="version" value="3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,56 +1,46 @@
-<div class="row">
-  <div class="col-lg-12">
-    <table class="table table-striped">
-      <thead class="thead-dark">
-      <tr>
-        <th scope="col">ID</th>
-        <th scope="col">Full name</th>
-        <th scope="col">Gender</th>
-        <th scope="col">Phone</th>
-        <th scope="col">Email</th>
-        <th scope="col">Address</th>
-        <th scope="col"></th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr [id]="'row'+student.id" *ngFor="let student of students">
-        <td>{{student.id}}</td>
-        <td>{{student.studentName}}</td>
-        <td>{{student.studentGender.genderName}}</td>
-        <td>{{student.phone}}</td>
-        <td>{{student.email}}</td>
-        <td>{{student.address}}</td>
-
-        <td><a class="btn btn-primary" [routerLink]="['/student/edit/',student.id]">EDIT</a></td>
-        <td>
-          <button type="button" class="btn btn-warning" data-bs-toggle="modal"
-                  [attr.data-bs-target]="['#'+student.id]">
-            DELETE
-          </button>
-        </td>
-        <div class="modal fade" [id]="student.id" tabindex="-1"
-             aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Confirm delete employee</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <p>Do you want to delete {{student.studentName}} employee?</p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-warning" data-bs-dismiss="modal"
-                        (click)="delete(student.id,student.studentName)">
-                  Delete
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </tr>
-      </tbody>
-    </table>
+<form [formGroup]="searchStudentForm" (submit)="onSubmit()" class="m-3 p-4 border rounded">
+  <div class="mb-3">
+    <label for="name" class="form-label">Student Name</label>
+    <input formControlName="name" type="text" class="form-control" id="name">
   </div>
+  <div class="mb-3">
+    <label for="gender" class="form-label">Gender</label>
+    <select formControlName="gender" class="form-select" id="gender">
+      <option value="0">All</option>
+      <option *ngFor="let gender of genders" [value]="gender.id">{{gender.genderName}}</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+<div class="page-container">
+  <main class="content">
+    <h1>Student List</h1>
+    <a class="create-link" routerLink="/student/create">
+      <i style="font-size: xx-large " class="fas fa-plus-circle"></i> <!-- Biểu tượng "plus-circle" -->
+    </a>
+    <ul class="product-list">
+      <li style="color: black"
+          *ngFor="let student of students | paginate: {itemsPerPage: 2,currentPage: p }; index as i"
+          class="product-item">
+        <div class="product-details">
+          <p><strong>Id:</strong> {{i + 1}}</p>
+          <p><strong>Student Name:</strong> {{student.studentName}}</p>
+          <p><strong>Gender:</strong> {{student.gender.genderName}}</p>
+          <p><strong>Phone:</strong> {{student.phone}}</p>
+          <p><strong>Email:</strong> {{student.email}}</p>
+          <p><strong>Address:</strong> {{student.address}}</p>
+        </div>
+        <div class="product-actions">
+          <a [routerLink]="['/student/edit',student.id]"> <i class="fa-regular fa-pen-to-square"
+                                                             style="color: black"></i></a>
+          <a (click)="openDeleteConfirmationDialog(student.id)">
+            <i class="fa-solid fa-trash" style="color: red"></i>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </main>
 </div>
+<pagination-controls (pageChange)="p = $event" previousLabel="Previous"
+                     nextLabel="Next" style="text-align: center"></pagination-controls>

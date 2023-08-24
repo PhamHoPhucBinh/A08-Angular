@@ -13,7 +13,7 @@ export class GenderService {
     return this._httpClient.get<Gender[]>(this.API_URL);
   }
 
-  getGenderById(id:string): Observable<Gender>{
+  getGenderById(id:number): Observable<Gender>{
     return this._httpClient.get<Gender>(`${this.API_URL}/${id}`);
   }
 }

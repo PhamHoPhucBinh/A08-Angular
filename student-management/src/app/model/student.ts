@@ -1,9 +1,9 @@
-import {Gender} from "./gender";
+import {Gender} from './gender';
 
 export interface Student {
   id: number;
   studentName: string;
-  studentGender: Gender;
+  gender: Gender;
   phone: string;
   email: string;
   address: string;

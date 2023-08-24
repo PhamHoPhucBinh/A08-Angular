@@ -1,15 +1,26 @@
 {
   "students": [
     {
-      "id": 1,
-      "studentName": "name test 1",
-      "studentGender": {
-        "id": "1",
+      "id": 6,
+      "studentName": "Phúc An",
+      "gender": {
+        "id": 2,
+        "genderName": "Female"
+      },
+      "email": "a@gmail.com",
+      "phone": 9123456798,
+      "address": "USA"
+    },
+    {
+      "studentName": "Phuc Minh",
+      "phone": 91654621,
+      "address": "BVBVB",
+      "email": "a@gmail.com",
+      "gender": {
+        "id": 1,
         "genderName": "Male"
       },
-      "phone": "0923695395",
-      "email": "a@gmail.com",
-      "address": "123 hung vuong, DN"
+      "id": 7
     }
   ],
   "teachers": [
