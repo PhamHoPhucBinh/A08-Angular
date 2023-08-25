@@ -1,28 +1,6 @@
 {
   "students": [
     {
-      "studentName": "Phuc Binh",
-      "phone": 923695395,
-      "address": "201714679",
-      "email": "hophucbinh2396@gmail.com",
-      "gender": {
-        "id": 1,
-        "genderName": "Male"
-      },
-      "id": 1
-    },
-    {
-      "studentName": "Tieu Chau",
-      "phone": 8491344622,
-      "address": "VN",
-      "email": "abc@gmail.com",
-      "gender": {
-        "id": 1,
-        "genderName": "Male"
-      },
-      "id": 2
-    },
-    {
       "id": 3,
       "studentName": "Hi Hi",
       "gender": {
@@ -32,6 +10,140 @@
       "email": "hophucbinh2396@gmail.com",
       "phone": 8413197688,
       "address": "USA"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "category": {
+        "id": 1,
+        "categoryName": "Nha Dat"
+      },
+      "region": {
+        "id": 2,
+        "regionName": "HCM"
+      },
+      "customerType": {
+        "id": 1,
+        "customerTypeName": "Ca Nhan"
+      },
+      "condition": {
+        "id": 2,
+        "conditionName": "Da su dung"
+      },
+      "userNeed": {
+        "id": 2,
+        "userNeedName": "Can Mua"
+      },
+      "address": "US",
+      "area": 11111111,
+      "directionNeed": {
+        "id": 2,
+        "directionNeedName": "Tay"
+      },
+      "title": "111111111111",
+      "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "price": 111111111,
+      "image": "url"
+    },
+    {
+      "id": 2,
+      "category": {
+        "id": 2,
+        "categoryName": "Can Ho"
+      },
+      "region": {
+        "id": 1,
+        "regionName": "Ha Noi"
+      },
+      "customerType": {
+        "id": 1,
+        "customerTypeName": "Ca Nhan"
+      },
+      "condition": {
+        "id": 1,
+        "conditionName": "Moi"
+      },
+      "userNeed": {
+        "id": 2,
+        "userNeedName": "Can Mua"
+      },
+      "address": "ru",
+      "area": 22222222,
+      "directionNeed": {
+        "id": 1,
+        "directionNeedName": "Dong"
+      },
+      "title": "22222222222",
+      "description": "2222222222",
+      "price": 22222222222,
+      "image": "url"
+    },
+    {
+      "id": 3,
+      "category": {
+        "id": 2,
+        "categoryName": "Can Ho"
+      },
+      "region": {
+        "id": 2,
+        "regionName": "HCM"
+      },
+      "customerType": {
+        "id": 1,
+        "customerTypeName": "Ca Nhan"
+      },
+      "condition": {
+        "id": 1,
+        "conditionName": "Moi"
+      },
+      "userNeed": {
+        "id": 1,
+        "userNeedName": "Can Ban"
+      },
+      "address": "test1",
+      "area": 21,
+      "directionNeed": {
+        "id": 2,
+        "directionNeedName": "Tay"
+      },
+      "title": "ttttt",
+      "description": "ddddd",
+      "price": 10000000000000000,
+      "image": "url"
+    },
+    {
+      "id": 4,
+      "category": {
+        "id": 1,
+        "categoryName": "Nha Dat"
+      },
+      "region": {
+        "id": 2,
+        "regionName": "HCM"
+      },
+      "customerType": {
+        "id": 1,
+        "customerTypeName": "Ca Nhan"
+      },
+      "condition": {
+        "id": 1,
+        "conditionName": "Moi"
+      },
+      "userNeed": {
+        "id": 2,
+        "userNeedName": "Can Mua"
+      },
+      "address": "bn abcdef",
+      "area": 21,
+      "directionNeed": {
+        "id": 1,
+        "directionNeedName": "Dong"
+      },
+      "title": "mmmm",
+      "description": "mmmm",
+      "price": 1000000000000,
+      "image": "url"
     }
   ],
   "teachers": [
@@ -124,6 +236,82 @@
     {
       "id": 2,
       "educationName": "College"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "categoryName": "Nha Dat"
+    },
+    {
+      "id": 2,
+      "categoryName": "Can Ho"
+    }
+  ],
+  "regions": [
+    {
+      "id": 1,
+      "regionName": "Ha Noi"
+    },
+    {
+      "id": 2,
+      "regionName": "HCM"
+    }
+  ],
+  "customerTypes": [
+    {
+      "id": 1,
+      "customerTypeName": "Ca Nhan"
+    },
+    {
+      "id": 2,
+      "customerTypeName": "Cong Ty"
+    }
+  ],
+  "userNeeds": [
+    {
+      "id": 1,
+      "userNeedName": "Can Ban"
+    },
+    {
+      "id": 2,
+      "userNeedName": "Can Mua"
+    },
+    {
+      "id": 3,
+      "userNeedName": "Can Thue"
+    },
+    {
+      "id": 4,
+      "userNeedName": "Cho thue"
+    }
+  ],
+  "conditions": [
+    {
+      "id": 1,
+      "conditionName": "Moi"
+    },
+    {
+      "id": 2,
+      "conditionName": "Da su dung"
+    }
+  ],
+  "directionNeeds": [
+    {
+      "id": 1,
+      "directionNeedName": "Dong"
+    },
+    {
+      "id": 2,
+      "directionNeedName": "Tay"
+    },
+    {
+      "id": 3,
+      "directionNeedName": "Nam"
+    },
+    {
+      "id": 4,
+      "directionNeedName": "Bac"
     }
   ]
 }

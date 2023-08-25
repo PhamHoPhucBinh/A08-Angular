@@ -1,0 +1,58 @@
+<form [formGroup]="searchPostForm" (submit)="onSubmit()" class="m-3 p-4 border rounded">
+  <div class="mb-3">
+    <label for="area" class="form-label">Area</label>
+    <input formControlName="area" type="number" class="form-control" id="area">
+  </div>
+  <div class="mb-3">
+    <label for="price" class="form-label">Price</label>
+    <input formControlName="price" type="number" class="form-control" id="price">
+  </div>
+  <div class="mb-3">
+    <label for="directionNeed" class="form-label">Direction Need</label>
+    <select formControlName="directionNeed" class="form-select" id="directionNeed">
+      <option value="0">All</option>
+      <option *ngFor="let directionNeed of directionNeeds"
+              [value]="directionNeed.id">{{directionNeed.directionNeedName}}</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+<div class="page-container">
+  <main class="content">
+    <h1>Post List</h1>
+    <a class="create-link" routerLink="/post/create">
+      <i style="font-size: xx-large " class="fas fa-plus-circle"></i> <!-- Biểu tượng "plus-circle" -->
+    </a>
+    <ul class="product-list">
+      <li style="color: black"
+          *ngFor="let post of posts | paginate: {itemsPerPage: 2,currentPage: p }; index as i"
+          class="product-item">
+        <div class="product-details">
+          <p><strong>Id:</strong> {{i + 1}}</p>
+          <p><strong>Category:</strong> {{post.category.categoryName}}</p>
+          <p><strong>Region:</strong> {{post.region.regionName}}</p>
+          <p><strong>CustomerType:</strong> {{post.customerType.customerTypeName}}</p>
+          <p><strong>userNeed:</strong> {{post.userNeed.userNeedName}}</p>
+          <p><strong>condition:</strong> {{post.condition.conditionName}}</p>
+          <p><strong>address:</strong> {{post.address}}</p>
+          <p><strong>area:</strong> {{post.area}}</p>
+          <p><strong>directionNeed:</strong> {{post.directionNeed.directionNeedName}}</p>
+          <p><strong>title:</strong> {{post.title}}</p>
+          <p><strong>description:</strong> {{post.description}}</p>
+          <p><strong>price:</strong> {{post.price}}</p>
+          <p><strong>image:</strong> {{post.image}}</p>
+        </div>
+        <div class="product-actions">
+          <a [routerLink]="['/post/edit',post.id]"> <i class="fa-regular fa-pen-to-square"
+                                                             style="color: black"></i></a>
+          <a>
+            <i class="fa-solid fa-trash" style="color: red"></i>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </main>
+</div>
+<pagination-controls (pageChange)="p = $event" previousLabel="Previous"
+                     nextLabel="Next" style="text-align: center"></pagination-controls>

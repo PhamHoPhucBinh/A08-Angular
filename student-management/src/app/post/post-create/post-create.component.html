@@ -1,0 +1,139 @@
+<div class="container mt-5">
+  <div class="product-form-container">
+    <h1>Create New Post</h1>
+    <form [formGroup]="postForm" (ngSubmit)="submit()">
+      <!--      category-->
+      <div class="form-group">
+        <label for="category">Category:</label>
+        <select id="category" class="form-control" formControlName="category" required>
+          <option value=0 disabled selected>Select a category</option>
+          <option *ngFor="let category of categories" [ngValue]="category">{{category.categoryName}}</option>
+        </select>
+        <div
+          *ngIf="postForm.get('category').invalid && (postForm.get('category').dirty || postForm.get('category').touched)">
+          <div *ngIf="postForm.get('category').hasError('required')">category is required</div>
+        </div>
+      </div>
+      <!--      region-->
+      <div class="form-group">
+        <label for="region">Region:</label>
+        <select id="region" class="form-control" formControlName="region" required>
+          <option value=0 disabled selected>Select a region</option>
+          <option *ngFor="let region of regions" [ngValue]="region">{{region.regionName}}</option>
+        </select>
+        <div
+          *ngIf="postForm.get('region').invalid && (postForm.get('region').dirty || postForm.get('region').touched)">
+          <div *ngIf="postForm.get('region').hasError('required')">region is required</div>
+        </div>
+      </div>
+      <!--      customer type-->
+      <div class="form-group">
+        <label for="customerType">CustomerType:</label>
+        <select id="customerType" class="form-control" formControlName="customerType" required>
+          <option value=0 disabled selected>Select a CustomerType</option>
+          <option *ngFor="let customerType of customerTypes"
+                  [ngValue]="customerType">{{customerType.customerTypeName}}</option>
+        </select>
+        <div
+          *ngIf="postForm.get('customerType').invalid && (postForm.get('customerType').dirty || postForm.get('customerType').touched)">
+          <div *ngIf="postForm.get('customerType').hasError('required')">CustomerType is required</div>
+        </div>
+      </div>
+      <!--      user need-->
+      <div class="form-group">
+        <label for="userNeed">User Need:</label>
+        <select id="userNeed" class="form-control" formControlName="userNeed" required>
+          <option value=0 disabled selected>Select a UserNeed</option>
+          <option *ngFor="let userNeed of userNeeds" [ngValue]="userNeed">{{userNeed.userNeedName}}</option>
+        </select>
+        <div
+          *ngIf="postForm.get('userNeed').invalid && (postForm.get('userNeed').dirty || postForm.get('userNeed').touched)">
+          <div *ngIf="postForm.get('userNeed').hasError('required')">UserNeed is required</div>
+        </div>
+      </div>
+      <!--      Condition-->
+      <div class="form-group">
+        <label for="condition">Condition:</label>
+        <select id="condition" class="form-control" formControlName="condition" required>
+          <option value=0 disabled selected>Select a condition</option>
+          <option *ngFor="let condition of conditions" [ngValue]="condition">{{condition.conditionName}}</option>
+        </select>
+        <div
+          *ngIf="postForm.get('condition').invalid && (postForm.get('condition').dirty || postForm.get('condition').touched)">
+          <div *ngIf="postForm.get('condition').hasError('required')">condition is required</div>
+        </div>
+      </div>
+      <!--      address-->
+      <div class="form-group">
+        <label for="address">address:</label>
+        <input type="text" id="address" class="form-control" formControlName="address"/>
+        <div
+          *ngIf="postForm.get('address').invalid && (postForm.get('address').dirty || postForm.get('address').touched)">
+          <div *ngIf="postForm.get('address').hasError('required')">Teacher Name is required</div>
+        </div>
+      </div>
+      <!--      AREA-->
+      <div class="form-group">
+        <label for="area">area:</label>
+        <input type="number" id="area" class="form-control" formControlName="area"/>
+        <div
+          *ngIf="postForm.get('area').invalid && (postForm.get('area').dirty || postForm.get('area').touched)">
+          <div *ngIf="postForm.get('area').hasError('required')">area is required</div>
+          <div *ngIf="postForm.get('area').hasError('min')">DT thap nhat la 20 </div>
+        </div>
+      </div>
+      <!--      Direction Need-->
+      <div class="form-group">
+        <label for="directionNeed">Direction:</label>
+        <select id="directionNeed" class="form-control" formControlName="directionNeed" required>
+          <option value=0 disabled selected>Select a Direction Need</option>
+          <option *ngFor="let directionNeed of directionNeeds"
+                  [ngValue]="directionNeed">{{directionNeed.directionNeedName}}</option>
+        </select>
+        <div
+          *ngIf="postForm.get('directionNeed').invalid && (postForm.get('directionNeed').dirty || postForm.get('directionNeed').touched)">
+          <div *ngIf="postForm.get('directionNeed').hasError('required')">Direction Need is required</div>
+        </div>
+      </div>
+      <!--      title -->
+      <div class="form-group">
+        <label for="title">title:</label>
+        <input type="text" id="title" class="form-control" formControlName="title"/>
+        <div
+          *ngIf="postForm.get('title').invalid && (postForm.get('title').dirty || postForm.get('title').touched)">
+          <div *ngIf="postForm.get('title').hasError('required')">title is required</div>
+        </div>
+      </div>
+      <!--      description-->
+      <div class="form-group">
+        <label for="description">description:</label>
+        <input type="text" id="description" class="form-control" formControlName="description"/>
+        <div
+          *ngIf="postForm.get('description').invalid && (postForm.get('description').dirty || postForm.get('description').touched)">
+          <div *ngIf="postForm.get('description').hasError('required')">description is required</div>
+        </div>
+      </div>
+      <!--      price-->
+      <div class="form-group">
+        <label for="price">price:</label>
+        <input type="number" id="price" class="form-control" formControlName="price"/>
+        <div
+          *ngIf="postForm.get('price').invalid && (postForm.get('price').dirty || postForm.get('price').touched)">
+          <div *ngIf="postForm.get('price').hasError('required')">description is required</div>
+          <div *ngIf="postForm.get('price').hasError('min')">gia thap nhat la 100tr</div>
+        </div>
+      </div>
+      <!--      image-->
+      <div class="form-group">
+        <label for="image">image:</label>
+        <input type="text" id="image" class="form-control" formControlName="image"/>
+        <div
+          *ngIf="postForm.get('image').invalid && (postForm.get('image').dirty || postForm.get('image').touched)">
+          <div *ngIf="postForm.get('image').hasError('required')">image is required</div>
+        </div>
+      </div>
+      <button class="btn btn-primary" [disabled]="!isFormValid">Submit</button>
+    </form>
+  </div>
+</div>
+
