@@ -37,7 +37,7 @@ export class EditComponent implements OnInit {
         studentName: new FormControl(student.studentName, [Validators.required, Validators.pattern('^([A-Z][a-z]+)( [A-Z][a-z]+)+$')]),
         phone: new FormControl(student.phone, [Validators.required]),
         address: new FormControl(student.address, [Validators.required]),
-        email: new FormControl(student.email, Validators.email),
+        email: new FormControl(student.email, [Validators.required,Validators.email]),
         gender: new FormControl(student.gender, [Validators.required])
       });
       this.studentForm.statusChanges.subscribe(status => {

@@ -11,23 +11,36 @@
     </div>
     <div class="mb-3">
       <label for="phone" class="form-label">Phone:</label>
-      <input type="number" class="form-control" id="phone" formControlName="phone">
+      <input type="text" class="form-control" id="phone" formControlName="phone">
+      <div *ngIf="studentForm.get('phone').invalid && (studentForm.get('phone').dirty || studentForm.get('phone').touched)">
+        <div *ngIf="studentForm.get('phone').hasError('required')">Required</div>
+      </div>
     </div>
     <div class="mb-3">
       <label for="email" class="form-label">Email:</label>
       <input type="text" class="form-control" id="email" formControlName="email">
+      <div *ngIf="studentForm.get('email').invalid && (studentForm.get('email').dirty || studentForm.get('email').touched)">
+        <div *ngIf="studentForm.get('email').hasError('pattern')">Invalid email</div>
+        <div *ngIf="studentForm.get('email').hasError('required')">Required</div>
+      </div>
     </div>
     <div class="mb-3">
       <label for="address" class="form-label">Address:</label>
       <input type="text" class="form-control" id="address" formControlName="address">
+      <div *ngIf="studentForm.get('address').invalid && (studentForm.get('address').dirty || studentForm.get('address').touched)">
+        <div *ngIf="studentForm.get('address').hasError('required')">Required</div>
+      </div>
     </div>
     <div class="mb-3">
       <label for="gender" class="form-label">Gender:</label>
       <select class="form-select" id="gender" formControlName="gender">
-        <option disabled selected>choose gender</option>
+        <option value='' disabled selected>choose gender</option>
         <option *ngFor="let gender of genders" [ngValue]="gender">{{gender.genderName}}</option>
       </select>
+      <div *ngIf="studentForm.get('gender').invalid && (studentForm.get('gender').dirty || studentForm.get('gender').touched)">
+        <div *ngIf="studentForm.get('gender').hasError('required')">Required</div>
+      </div>
     </div>
-    <button type="submit" class="btn btn-primary" [disabled]="studentForm.invalid"><i class="fas fa-save me-2"></i>Cập nhật</button>
+    <button type="submit" class="btn btn-primary" [disabled]="studentForm.invalid"><i class="fas fa-save me-2"></i>Update</button>
   </form>
 </div>

@@ -1,27 +1,49 @@
 {
   "students": [
     {
-      "id": 1,
-      "studentName": "Phu Binh",
+      "studentName": "Phuc Binh",
+      "phone": 923695395,
+      "address": "201714679",
+      "email": "hophucbinh2396@gmail.com",
+      "gender": {
+        "id": 1,
+        "genderName": "Male"
+      },
+      "id": 1
+    },
+    {
+      "studentName": "Tieu Chau",
+      "phone": 8491344622,
+      "address": "VN",
+      "email": "abc@gmail.com",
+      "gender": {
+        "id": 1,
+        "genderName": "Male"
+      },
+      "id": 2
+    },
+    {
+      "id": 3,
+      "studentName": "Hi Hi",
       "gender": {
         "id": 1,
         "genderName": "Male"
       },
       "email": "hophucbinh2396@gmail.com",
-      "phone": 923695395,
-      "address": "201714679"
+      "phone": 8413197688,
+      "address": "USA"
     }
   ],
   "teachers": [
     {
       "teacherName": "Phuc Binh",
       "gender": {
-        "id": 1,
-        "genderName": "Male"
+        "id": 2,
+        "genderName": "Female"
       },
       "education": {
-        "id": 2,
-        "educationName": "College"
+        "id": 1,
+        "educationName": "Master"
       },
       "birthday": "23/10/1996",
       "salary": 950,
@@ -40,6 +62,48 @@
         "educationName": "College"
       },
       "salary": 9000000
+    },
+    {
+      "id": 5,
+      "teacherName": "Mi Mi",
+      "gender": {
+        "id": 1,
+        "genderName": "Male"
+      },
+      "birthday": "23/10/1996",
+      "education": {
+        "id": 1,
+        "educationName": "Master"
+      },
+      "salary": 500004
+    },
+    {
+      "id": 6,
+      "teacherName": "La La",
+      "gender": {
+        "id": 2,
+        "genderName": "Female"
+      },
+      "birthday": "5/5/1995",
+      "education": {
+        "id": 1,
+        "educationName": "Master"
+      },
+      "salary": 161616
+    },
+    {
+      "id": 7,
+      "teacherName": "Mi Mi",
+      "gender": {
+        "id": 1,
+        "genderName": "Male"
+      },
+      "birthday": "23/10/1996",
+      "education": {
+        "id": 2,
+        "educationName": "College"
+      },
+      "salary": 222222
     }
   ],
   "genders": [

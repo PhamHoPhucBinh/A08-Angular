@@ -25,7 +25,7 @@ export class StudentCreateComponent implements OnInit {
     this.studentForm = new FormGroup({
       id: new FormControl(),
       studentName: new FormControl('', [Validators.required, Validators.pattern('^([A-Z][a-z]+)( [A-Z][a-z]+)+$')]),
-      gender: new FormControl(0, [Validators.required]),
+      gender: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required, Validators.email]),
       phone: new FormControl('', [Validators.required, Validators.pattern('(84|0[3|5|7|8|9])+([0-9]{8})\\b')]),
       address: new FormControl('', [Validators.required]),
