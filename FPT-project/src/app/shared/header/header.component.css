@@ -1,0 +1,15 @@
+
+.banner {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: block;
+  height: 2cm; /* Chiều dọc là 2cm */
+  overflow: hidden; /* Ẩn nội dung vượt quá kích thước */
+}
+
+.navbar {
+  background-color: yellow; /* Đặt màu nền thành màu vàng */
+}
+
+
