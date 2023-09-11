@@ -58,11 +58,12 @@ export class PostListComponent implements OnInit {
     this.getAllCondition();
     this.getAllUserNeed();
     this.getAllDirectionNeed();
+    this.getAllPost();
   }
 
   onSubmit() {
     const formValue = this.searchPostForm.value;
-    this.postService.searchPost(formValue.price, formValue.area, formValue.directionNeed).subscribe((data) => {
+    this.postService.searchPost(formValue.area, formValue.price, formValue.directionNeed).subscribe((data) => {
       this.posts = data;
     });
   }

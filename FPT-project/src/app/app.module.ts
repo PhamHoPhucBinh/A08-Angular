@@ -6,6 +6,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BodyComponent } from './shared/body/body.component';
 
 // @ts-ignore
 // @ts-ignore
@@ -13,7 +14,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    BodyComponent
   ],
   imports: [
     BrowserModule,

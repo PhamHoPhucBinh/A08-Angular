@@ -1,12 +1,15 @@
 <form [formGroup]="searchPostForm" (submit)="onSubmit()" class="m-3 p-4 border rounded">
+
   <div class="mb-3">
     <label for="area" class="form-label">Area</label>
     <input formControlName="area" type="number" class="form-control" id="area">
   </div>
+
   <div class="mb-3">
     <label for="price" class="form-label">Price</label>
     <input formControlName="price" type="number" class="form-control" id="price">
   </div>
+
   <div class="mb-3">
     <label for="directionNeed" class="form-label">Direction Need</label>
     <select formControlName="directionNeed" class="form-select" id="directionNeed">
@@ -15,6 +18,7 @@
               [value]="directionNeed.id">{{directionNeed.directionNeedName}}</option>
     </select>
   </div>
+
   <button type="submit" class="btn btn-primary">Search</button>
 </form>
 

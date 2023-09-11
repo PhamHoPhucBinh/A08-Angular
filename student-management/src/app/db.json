@@ -144,6 +144,72 @@
       "description": "mmmm",
       "price": 1000000000000,
       "image": "url"
+    },
+    {
+      "id": 5,
+      "category": {
+        "id": 2,
+        "categoryName": "Can Ho"
+      },
+      "region": {
+        "id": 1,
+        "regionName": "Ha Noi"
+      },
+      "customerType": {
+        "id": 1,
+        "customerTypeName": "Ca Nhan"
+      },
+      "condition": {
+        "id": 2,
+        "conditionName": "Da su dung"
+      },
+      "userNeed": {
+        "id": 4,
+        "userNeedName": "Cho thue"
+      },
+      "address": "USA",
+      "area": 123,
+      "directionNeed": {
+        "id": 4,
+        "directionNeedName": "Bac"
+      },
+      "title": "123",
+      "description": "123",
+      "price": 200000000,
+      "image": "url"
+    },
+    {
+      "id": 6,
+      "category": {
+        "id": 1,
+        "categoryName": "Nha Dat"
+      },
+      "region": {
+        "id": 1,
+        "regionName": "Ha Noi"
+      },
+      "customerType": {
+        "id": 1,
+        "customerTypeName": "Ca Nhan"
+      },
+      "condition": {
+        "id": 2,
+        "conditionName": "Da su dung"
+      },
+      "userNeed": {
+        "id": 1,
+        "userNeedName": "Can Ban"
+      },
+      "address": "Linh Coffee Tam Quang, Núi Thành, Quảng Nam",
+      "area": 999,
+      "directionNeed": {
+        "id": 3,
+        "directionNeedName": "Nam"
+      },
+      "title": "test1",
+      "description": "test1",
+      "price": 250000000,
+      "image": "url"
     }
   ],
   "teachers": [
