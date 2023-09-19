@@ -7,6 +7,7 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BodyComponent } from './shared/body/body.component';
+import { ImageScrllComponent } from './shared/image-scroll/image-scrll.component';
 
 // @ts-ignore
 // @ts-ignore
@@ -15,7 +16,8 @@ import { BodyComponent } from './shared/body/body.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    BodyComponent
+    BodyComponent,
+    ImageScrllComponent
   ],
   imports: [
     BrowserModule,

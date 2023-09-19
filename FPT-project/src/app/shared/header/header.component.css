@@ -12,6 +12,7 @@
   background-color: #ffd400; /* Đặt màu nền thành màu vàng */
   margin: auto;
 }
+
 .navbar-nav {
   width: 100%;
   justify-content: space-between;
@@ -21,10 +22,17 @@
   flex: 1;
   text-align: center;
 }
-.searchbar{
+
+.searchbar {
   flex: 1;
   margin: auto;
-  justify-content: space-between;
+  /*justify-content: flex-start;*/
+  /*width: 5cm;*/
+}
+
+.btn btn-dark {
+  right: 10cm;
+  width: 10cm;
 }
 
 
